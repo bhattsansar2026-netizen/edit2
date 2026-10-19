@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* =========================================================
+   GLOBAL SCROLLBAR STYLES: REMOVE ALL SCROLLBAR ARROWS EVERYWHERE
+   ========================================================= */
+
+/* Completely hide and eliminate any scrollbar arrows/buttons in Chrome, Safari, Edge, and Windows */
+*::-webkit-scrollbar-button,
+::-webkit-scrollbar-button {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+}
+
+/* Modern sleek scrollbar without arrows */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 113, 108, 0.35);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 158, 11, 0.6);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox scrollbar without arrows */
+* {
+  scrollbar-color: rgba(120, 113, 108, 0.35) transparent;
+  scrollbar-width: thin;
+}
+
+/* =========================================================
+   UNIVERSAL SCROLLBAR HIDING UTILITIES (No scrollbars, No arrows)
+   ========================================================= */
+.scrollbar-none,
+.no-scrollbar,
+[data-no-scrollbar="true"] {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox */
+}
+
+.scrollbar-none::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar,
+[data-no-scrollbar="true"]::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari, Opera */
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.scrollbar-none::-webkit-scrollbar-button,
+.no-scrollbar::-webkit-scrollbar-button,
+[data-no-scrollbar="true"]::-webkit-scrollbar-button {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
